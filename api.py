@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
-# Print statement updated as requested
+# Print statement
 print("Goodbye")
 
 app = FastAPI(
@@ -15,9 +15,11 @@ app = FastAPI(
     version="2.1.5"
 )
 
+# 🟢 CORS Middleware (allow_credentials সহ পুরোপুরি আপডেট করা হয়েছে)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_credentials=True,  # 👈 এটি যুক্ত করতে হবে
     allow_methods=["*"],
     allow_headers=["*"],
 )
