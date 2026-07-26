@@ -1,6 +1,6 @@
 import httpx, json
 
-BASE = "http://localhost:8000"
+BASE = "https://moviebox-api-sigma.vercel.app"
 
 ENDPOINTS = [
     "/",
